@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potwierdzenie rezerwacji — JungleSpot</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="logo">🌴 Jungle<span>Spot</span></a>
+      <nav class="nav" id="nav-menu">
+        <a href="index.html">Strona główna</a>
+        <a href="regulamin.html">Regulamin</a>
+      </nav>
+      <div class="topbar-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Zmień motyw">🌙</button>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="hero-title">REZERWACJA</h1>
+      <p class="section-text">Kalendarz rezerwacji</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-narrow">
+      <div class="confirm-box" id="confirm-box">
+
+        <h2 class="confirm-title">Dziękujemy za rezerwację w Jungle Spot! 🎉</h2>
+
+        <p id="confirm-tekst">
+          Otrzymaliśmy Państwa zgłoszenie rezerwacji na termin
+          <strong id="confirm-data">—</strong>.
+        </p>
+
+        <p>Numer rezerwacji: <strong id="confirm-numer">—</strong></p>
+
+        <div class="confirm-section">
+          <p>Aby potwierdzić rezerwację terminu, prosimy o wpłatę kaucji:</p>
+          <p class="confirm-kaucja">Kaucja standardowa: <strong>400 zł</strong></p>
+          <p class="confirm-kaucja">Imprezy dla osób poniżej 20. roku życia: <strong>800 zł</strong></p>
+          <p class="confirm-kwota" id="confirm-kwota"></p>
+        </div>
+
+        <div class="confirm-section bank-box">
+          <h3>Dane do przelewu</h3>
+          <p>Odbiorca: <strong>DANIEL KOWALSKI WYNAJEM</strong></p>
+          <p>Numer konta: <strong>50 1020 1909 0000 3902 0335 4578</strong></p>
+          <p>Tytuł przelewu: <strong id="confirm-tytul">KAUCJA —</strong></p>
+          <button type="button" class="btn btn-secondary btn-copy" id="copy-tytul">Skopiuj tytuł przelewu</button>
+        </div>
+
+        <p class="confirm-note">Po zaksięgowaniu wpłaty termin zostanie potwierdzony i oznaczony w kalendarzu jako zajęty. Potwierdzenie wysłaliśmy także na Państwa adres e-mail.</p>
+
+        <a href="index.html" class="btn btn-primary">Wróć na stronę główną</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-logo">🌴 Jungle<span>Spot</span></p>
+      <p>Imprezowe Studio Gdańsk · tel. 667 436 655 · junglespotgdansk@gmail.com</p>
+      <p><a href="index.html">Strona główna</a> · <a href="regulamin.html">Regulamin</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

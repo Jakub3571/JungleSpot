@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imprezowe Studio Gdańsk — Domek imprezowy | JungleSpot</title>
+  <meta name="description"
+    content="Wynajmij lokal na imprezę w Gdańsku! Imprezowe Studio JungleSpot — urodziny, imprezy firmowe, spotkania towarzyskie. Zarezerwuj termin już dziś!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Pasek górny: logo + menu + przycisk rezerwacji -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="logo">🌴 Jungle<span>Spot</span></a>
+
+      <nav class="nav" id="nav-menu">
+        <a href="#o-nas">O nas</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#lokalizacja">Lokalizacja</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="regulamin.html">Regulamin</a>
+        <a href="rezerwacja.html" class="nav-reserve">✨ Zarezerwuj termin</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <a href="rezerwacja.html" class="btn btn-primary btn-small">Zarezerwuj termin</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sekcja główna (hero) -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">WYNAJMIJ NASZ LOKAL<br>NA IMPREZĘ!</h1>
+      <p class="hero-address">Żwirki i Wigury 4A/15, 80-463 Gdańsk</p>
+      <p class="hero-contact">
+        tel: <a href="tel:+48667436655">667 436 655</a> ·
+        email: <a href="mailto:junglespotgdansk@gmail.com">junglespotgdansk@gmail.com</a>
+      </p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/ImprezoweStudio" target="_blank" rel="noopener"
+          class="social-link">Facebook</a>
+        <a href="https://www.instagram.com/junglespot_imprezowestudio/" target="_blank" rel="noopener"
+          class="social-link">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekcja: o nas -->
+  <section class="section" id="o-nas">
+    <div class="container">
+      <h2 class="section-title">Witamy w naszym lokalu!</h2>
+      <p class="section-text">
+        Szukasz idealnego miejsca na organizację niezapomnianej imprezy?
+        Nasz lokal to odpowiednie miejsce dla Ciebie! Niezależnie od tego,
+        czy planujesz uroczystość rodzinną, przyjęcie urodzinowe,
+        imprezę firmową czy też spotkanie towarzyskie, oferujemy miejsce,
+        które spełni Twoje oczekiwania.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sekcja: co oferujemy -->
+  <section class="section section-alt" id="oferta">
+    <div class="container">
+      <h2 class="section-title">Co oferujemy?</h2>
+      <ul class="offer-list">
+        <li>dwupoziomowy lokal na wyłączność</li>
+        <li>powierzchnia użytkowa 100 m²</li>
+        <li>ponad 30 miejsc siedzących (przy stolikach i przy barze)</li>
+        <li>przestrzeń do tańca z nagłośnieniem (na poziomie -1)</li>
+        <li>taras z zadaszeniem</li>
+        <li>duży telewizor (YouTube, Netflix, przeglądarka)</li>
+        <li>oświetlenie imprezowe</li>
+        <li>bar z opcją wynajmu barmana</li>
+        <li>profesjonalne nagłośnienie</li>
+        <li>lodówka z zamrażarką, czajnik, mikrofalówka, środki czystości</li>
+        <li>klimatyzacja i ogrzewanie na obu poziomach</li>
+        <li>ścianka zdjęciowa</li>
+        <li>grill</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Sekcja: galeria (zdjęcia z folderu images/) -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <h2 class="section-title">Galeria</h2>
+      <p class="section-text">Zobacz, jak wygląda nasz lokal.</p>
+      <div class="gallery">
+        <figure class="gallery-item">
+          <img src="images/sala_glowna.jpg" alt="Sala główna lokalu">
+          <figcaption>Sala główna</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/bar_gora.jpg" alt="Bar lokalu">
+          <figcaption>Bar Górny</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/taniec.jpg" alt="Przestrzeń do tańca">
+          <figcaption>Przestrzeń do tańca</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/taras.jpg" alt="Taras z zadaszeniem">
+          <figcaption>Taras</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/bar_dol.jpg" alt="Bar dół">
+          <figcaption>Bar Dół</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/sciannka.jpg" alt="Ścianka zdjęciowa">
+          <figcaption>Ścianka zdjęciowa</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekcja: cennik -->
+  <section class="section section-alt" id="cennik">
+    <div class="container">
+      <h2 class="section-title">Cennik</h2>
+      <div class="pricing">
+        <div class="price-card">
+          <h3>Pakiet Start</h3>
+          <p class="price">4 godziny</p>
+          <ul>
+            <li>wynajem lokalu na wyłączność</li>
+            <li>nagłośnienie podstawowe</li>
+            <li>obsługa telefonu w godzinach wynajmu</li>
+          </ul>
+          <a href="rezerwacja.html" class="btn btn-secondary">Zapytaj o cenę</a>
+        </div>
+        <div class="price-card price-card-featured">
+          <span class="badge">Najpopularniejszy</span>
+          <h3>Pakiet Impreza</h3>
+          <p class="price">8 godzin</p>
+          <ul>
+            <li>wszystko z pakietu Start</li>
+            <li>oświetlenie imprezowe</li>
+            <li>ścianka zdjęciowa</li>
+            <li>grill + taras</li>
+          </ul>
+          <a href="rezerwacja.html" class="btn btn-primary">Zarezerwuj</a>
+        </div>
+        <div class="price-card">
+          <h3>Pakiet Firmowy</h3>
+          <p class="price">Indywidualnie</p>
+          <ul>
+            <li>wynajem na cały dzień</li>
+            <li>wynajem barmana</li>
+            <li>duży telewizor do prezentacji</li>
+          </ul>
+          <a href="rezerwacja.html" class="btn btn-secondary">Zapytaj o ofertę</a>
+        </div>
+      </div>
+      <p class="pricing-note">Ceny ustalane indywidualnie — zadzwoń: <a href="tel:+48667436655">667 436 655</a></p>
+    </div>
+  </section>
+
+  <!-- Sekcja: lokalizacja -->
+  <section class="section" id="lokalizacja">
+    <div class="container">
+      <h2 class="section-title">Lokalizacja</h2>
+      <h3 class="map-subtitle">Zobacz nas na mapie</h3>
+      <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps?q=%C5%BBwirki+i+Wigury+4A%2F15,+80-463+Gda%C5%84sk&output=embed"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa — JungleSpot Gdańsk"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stopka -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <p class="footer-logo">🌴 Jungle<span>Spot</span></p>
+      <p>Imprezowe Studio Gdańsk</p>
+      <p>Żwirki i Wigury 4A/15, 80-463 Gdańsk · tel. 667 436 655 · junglespotgdansk@gmail.com</p>
+      <p><a href="regulamin.html">Regulamin</a> · <a href="rezerwacja.html">Rezerwacja</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

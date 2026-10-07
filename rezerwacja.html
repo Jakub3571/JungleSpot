@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rezerwacja terminu — JungleSpot Gdańsk</title>
+  <meta name="description" content="Zarezerwuj termin na imprezę w JungleSpot Gdańsk. Sprawdź kalendarz dostępności i wypełnij formularz rezerwacji.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="logo">🌴 Jungle<span>Spot</span></a>
+
+      <nav class="nav" id="nav-menu">
+        <a href="index.html">Strona główna</a>
+        <a href="index.html#oferta">Oferta</a>
+        <a href="index.html#cennik">Cennik</a>
+        <a href="index.html#lokalizacja">Lokalizacja</a>
+        <a href="regulamin.html">Regulamin</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Zmień motyw">🌙</button>
+        <a href="index.html" class="btn btn-primary btn-small">Wróć na stronę</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="hero-title">ZAREZERWUJ TERMIN</h1>
+      <p class="section-text">Sprawdź dostępność w kalendarzu, wybierz dzień i wypełnij formularz.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="booking-grid">
+
+        <!-- LEWA STRONA: kalendarz -->
+        <div class="calendar-box">
+          <h2 class="calendar-title">📅 Dostępność terminów</h2>
+          <p class="calendar-hint">
+            Kliknij wolny dzień — data wstawi się do formularza.<br>
+            <span class="legend-busy">■ zajęte</span>
+            <span class="legend-pending">■ w oczekiwaniu na wpłatę</span>
+          </p>
+
+          <div class="cal-head">
+            <button id="cal-prev" class="cal-nav" aria-label="Poprzedni miesiąc">‹</button>
+            <span id="cal-month" class="cal-month"></span>
+            <button id="cal-next" class="cal-nav" aria-label="Następny miesiąc">›</button>
+          </div>
+
+          <div class="cal-grid cal-weekdays">
+            <span>Pn</span><span>Wt</span><span>Śr</span><span>Cz</span><span>Pt</span><span class="cal-weekend">Sob</span><span class="cal-weekend">Ndz</span>
+          </div>
+          <div id="cal-days" class="cal-grid cal-days"></div>
+        </div>
+
+        <!-- PRAWA STRONA: formularz -->
+        <form class="booking-form" id="booking-form">
+          <h2 class="form-title">Formularz rezerwacji</h2>
+
+          <label>
+            Imię i nazwisko
+            <input type="text" name="imie" required placeholder="Jan Kowalski">
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email" required placeholder="jan@example.com">
+          </label>
+          <label>
+            Telefon
+            <input type="tel" name="telefon" required placeholder="600 100 200">
+          </label>
+          <label>
+            Data imprezy (wybierz z kalendarza)
+            <input type="date" name="data" required readonly>
+          </label>
+          <label>
+            Czy wszyscy goście są w wieku 20+ lat?
+            <select name="wiek">
+              <option value="tak">Tak — kaucja 400 zł</option>
+              <option value="nie">Nie — kaucja 800 zł</option>
+            </select>
+          </label>
+          <label>
+            Rodzaj imprezy
+            <select name="rodzaj">
+              <option>Urodziny</option>
+              <option>Impreza firmowa</option>
+              <option>Uroczystość rodzinna</option>
+              <option>Spotkanie towarzyskie</option>
+              <option>Inne</option>
+            </select>
+          </label>
+          <label>
+            Wiadomość (opcjonalnie)
+            <textarea name="wiadomosc" rows="3" placeholder="Dodatkowe informacje..."></textarea>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="regulamin" required>
+            Akceptuję <a href="regulamin.html">regulamin</a> lokalu
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-large">Wyślij rezerwację</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+
+      </div>
+
+      <p class="contact-alt">Wolisz telefon? Zadzwoń: <a href="tel:+48667436655">667 436 655</a> ·
+        napisz: <a href="mailto:junglespotgdansk@gmail.com">junglespotgdansk@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-logo">🌴 Jungle<span>Spot</span></p>
+      <p>Imprezowe Studio Gdańsk</p>
+      <p>Żwirki i Wigury 4A/15, 80-463 Gdańsk · tel. 667 436 655 · junglespotgdansk@gmail.com</p>
+      <p><a href="regulamin.html">Regulamin</a> · <a href="index.html">Strona główna</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
