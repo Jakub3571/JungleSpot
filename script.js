@@ -245,3 +245,33 @@ if (bookingForm) {
     }
   });
 }
+
+
+
+/* ===== TŁO STRONY — parallax zsynchronizowany ze scrollem ===== */
+// Zapisujemy pozycję scrolla do zmiennej CSS, żeby tło (body::before w style.css)
+// przesuwało się płynnie i wolniej niż treść strony.
+(function () {
+  var aktualnyScroll = window.scrollY || 0;
+  var docelowyScroll = aktualnyScroll;
+
+  function aktualizujTlo() {
+    // płynne dojście do wartości docelowej (efekt leniwego ruchu)
+    aktualnyScroll += (docelowyScroll - aktualnyScroll) * 0.08;
+
+    if (Math.abs(docelowyScroll - aktualnyScroll) < 0.5) {
+      aktualnyScroll = docelowyScroll;
+    }
+
+    document.documentElement.style.setProperty('--scroll', (-aktualnyScroll * 0.15).toFixed(2));
+
+    if (aktualnyScroll !== docelowyScroll) {
+      requestAnimationFrame(aktualizujTlo);
+    }
+  }
+
+  window.addEventListener('scroll', function () {
+    docelowyScroll = window.scrollY || 0;
+    requestAnimationFrame(aktualizujTlo);
+  }, { passive: true });
+})();

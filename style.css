@@ -26,23 +26,24 @@ html.dark {
 
 html { scroll-behavior: smooth; }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
-}
-
-/* Delikatna LED-owa poświata pod całą stroną */
+/* Tło strony — tropikalne liście + LED-owa poświata.
+   Obraz przesuwa się wolniej niż treść (parallax sterowany zmienną --scroll z script.js) */
 body::before {
   content: "";
   position: fixed;
-  inset: 0;
+  inset: -20% 0;
   pointer-events: none;
   background:
     radial-gradient(600px 400px at 15% 0%, rgba(168, 85, 247, 0.14), transparent 60%),
-    radial-gradient(600px 400px at 85% 100%, rgba(57, 255, 20, 0.09), transparent 60%);
+    radial-gradient(600px 400px at 85% 100%, rgba(57, 255, 20, 0.09), transparent 60%),
+    url("images/tło/9940fe35-87a6-4de9-8abc-5166a612e65e.jpg") center top / cover no-repeat;
+  opacity: 0.35;
+  transform: translateY(calc(var(--scroll, 0) * 1px));
   z-index: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before { transform: none; }
 }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
@@ -132,7 +133,8 @@ a { color: var(--color-green); text-decoration: none; }
 .hero {
   background:
     radial-gradient(800px 500px at 50% -10%, rgba(168, 85, 247, 0.35), transparent 65%),
-    linear-gradient(180deg, #140f22, #0d0a14);
+    linear-gradient(180deg, rgba(20, 15, 34, 0.88), rgba(13, 10, 20, 0.92)),
+    url("images/tło/35a551bd-aba1-422b-9a67-f0e1949acc8e.jpg") center / cover no-repeat;
   color: #ffffff;
   text-align: center;
   padding: 90px 20px;
