@@ -28,6 +28,15 @@ html { scroll-behavior: smooth; }
 
 /* Tło strony — tropikalne liście + LED-owa poświata.
    Obraz przesuwa się wolniej niż treść (parallax sterowany zmienną --scroll z script.js) */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Tło strony — kwiatki tropikalne + LED-owa poświata.
+   Obraz przesuwa się wolniej niż treść (parallax sterowany zmienną --scroll z script.js) */
 body::before {
   content: "";
   position: fixed;
@@ -133,8 +142,7 @@ a { color: var(--color-green); text-decoration: none; }
 .hero {
   background:
     radial-gradient(800px 500px at 50% -10%, rgba(168, 85, 247, 0.35), transparent 65%),
-    linear-gradient(180deg, rgba(20, 15, 34, 0.88), rgba(13, 10, 20, 0.92)),
-    url("images/tło/35a551bd-aba1-422b-9a67-f0e1949acc8e.jpg") center / cover no-repeat;
+    linear-gradient(180deg, #140f22, #0d0a14);
   color: #ffffff;
   text-align: center;
   padding: 90px 20px;
