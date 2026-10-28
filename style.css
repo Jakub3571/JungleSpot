@@ -108,7 +108,7 @@ a { color: var(--color-green); text-decoration: none; }
 .logo {
   font-weight: 800;
   font-size: 1.3rem;
-  color: #ffffff;
+  color: var(--color-purple);
   white-space: nowrap;
   text-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
 }
@@ -228,6 +228,11 @@ a { color: var(--color-green); text-decoration: none; }
   padding: 14px 16px 14px 44px;
   position: relative;
   transition: box-shadow 0.2s, border-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 58px;
 }
 .offer-list li:nth-child(even) { border-left-color: var(--color-green); }
 .offer-list li:hover { box-shadow: var(--glow-purple); }
@@ -398,7 +403,7 @@ a { color: var(--color-green); text-decoration: none; }
 .footer-logo {
   font-weight: 800;
   font-size: 1.2rem;
-  color: #ffffff;
+  color: var(--color-purple);
   margin-bottom: 6px;
   text-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
 }
@@ -705,4 +710,90 @@ html.dark .calendar-embed iframe { filter: none; }
   color: var(--color-muted);
   border-top: 1px solid var(--color-border);
   padding-top: 14px;
+}
+
+/* ===== PYTANIA TAK/NIE W FORMULARZU REZERWACJI ===== */
+.yesno-group {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.yesno-group legend {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  padding: 0 8px;
+}
+
+.yesno-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.yesno-name {
+  flex: 1;
+  min-width: 200px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.yesno-options {
+  display: flex;
+  gap: 16px;
+}
+
+.yesno-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+
+.yesno-option input {
+  position: absolute;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.yesno-mark {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  flex: none;
+}
+
+.yesno-option input:checked + .yesno-mark {
+  border-color: var(--color-green);
+  box-shadow: var(--glow-green);
+}
+
+.yesno-option input:checked + .yesno-mark::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: var(--color-green);
+}
+
+.yesno-option input:focus-visible + .yesno-mark {
+  outline: 2px solid var(--color-purple);
+  outline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+  .yesno-options { width: 100%; justify-content: flex-start; }
 }

@@ -25,7 +25,7 @@
       </nav>
 
       <div class="topbar-actions">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Zmień motyw">🌙</button>
+
         <a href="index.html" class="btn btn-primary btn-small">Wróć na stronę</a>
         <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
       </div>
@@ -91,6 +91,41 @@
               <option value="nie">Nie — kaucja 800 zł</option>
             </select>
           </label>
+                    <fieldset class="yesno-group">
+            <legend>Dodatkowe usługi — zaznacz Tak lub Nie:</legend>
+
+            <div class="yesno-row">
+              <span class="yesno-name">Czy jesteś zainteresowany usługami DJ-a?</span>
+              <span class="yesno-options">
+                <label class="yesno-option"><input type="radio" name="usluga_dj" value="tak" required><span class="yesno-mark"></span>Tak</label>
+                <label class="yesno-option"><input type="radio" name="usluga_dj" value="nie" required><span class="yesno-mark"></span>Nie</label>
+              </span>
+            </div>
+
+            <div class="yesno-row">
+              <span class="yesno-name">Czy jesteś zainteresowany usługami ochrony?</span>
+              <span class="yesno-options">
+                <label class="yesno-option"><input type="radio" name="usluga_ochrona" value="tak" required><span class="yesno-mark"></span>Tak</label>
+                <label class="yesno-option"><input type="radio" name="usluga_ochrona" value="nie" required><span class="yesno-mark"></span>Nie</label>
+              </span>
+            </div>
+
+            <div class="yesno-row">
+              <span class="yesno-name">Katering?</span>
+              <span class="yesno-options">
+                <label class="yesno-option"><input type="radio" name="usluga_katering" value="tak" required><span class="yesno-mark"></span>Tak</label>
+                <label class="yesno-option"><input type="radio" name="usluga_katering" value="nie" required><span class="yesno-mark"></span>Nie</label>
+              </span>
+            </div>
+
+            <div class="yesno-row">
+              <span class="yesno-name">Usługi barmańskie?</span>
+              <span class="yesno-options">
+                <label class="yesno-option"><input type="radio" name="usluga_barman" value="tak" required><span class="yesno-mark"></span>Tak</label>
+                <label class="yesno-option"><input type="radio" name="usluga_barman" value="nie" required><span class="yesno-mark"></span>Nie</label>
+              </span>
+            </div>
+          </fieldset>
           <label>
             Rodzaj imprezy
             <select name="rodzaj">
