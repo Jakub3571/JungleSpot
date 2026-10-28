@@ -27,22 +27,39 @@ body {
    Obraz przesuwa się wolniej niż treść (parallax sterowany zmienną --scroll z script.js) */
 /* Tło strony — ciemne kwiatki tropikalne + LED-owa poświata.
    Obraz przesuwa się wolniej niż treść (parallax sterowany zmienną --scroll z script.js) */
+/* Tło strony — ciemne kwiatki tropikalne + LED-owa poświata.
+   Obraz przesuwa się wolniej niż treść (parallax sterowany zmienną --scroll z script.js) */
+/* Tło strony — ciemne liście przyklejone na stałe za całą treścią.
+   Bez animacji: nic nie migocze, wzór jest ciągle widoczny. */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Tło strony — ciemne liście przyklejone na stałe za całą treścią.
+   Statyczne: nic się nie przesuwa, nic nie migocze. */
 body::before {
   content: "";
   position: fixed;
-  inset: -20% 0;
+  inset: 0;
   pointer-events: none;
-  background:
-    radial-gradient(600px 400px at 15% 0%, rgba(168, 85, 247, 0.14), transparent 60%),
-    radial-gradient(600px 400px at 85% 100%, rgba(57, 255, 20, 0.09), transparent 60%),
-    url("images/tło/tło ciemne.jpg") center top / cover no-repeat;
-  opacity: 0.35;
-  transform: translateY(calc(var(--scroll, 0) * 1px));
+  background: url("images/tło/tło ciemne.jpg") center / cover no-repeat;
+  opacity: 0.45;
   z-index: 0;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  body::before { transform: none; }
+/* LED-owa poświata — osobna, statyczna warstwa */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(600px 400px at 15% 0%, rgba(168, 85, 247, 0.14), transparent 60%),
+    radial-gradient(600px 400px at 85% 100%, rgba(57, 255, 20, 0.09), transparent 60%);
+  z-index: 0;
 }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
@@ -188,11 +205,8 @@ a { color: var(--color-green); text-decoration: none; }
 
 /* Co druga sekcja — jasne liście pod ciemną, półprzezroczystą szybką
    (naprzemiennie z ciemnymi liśćmi w tle całej strony) */
-.section-alt {
-  background:
-    linear-gradient(180deg, rgba(20, 16, 31, 0.90), rgba(20, 16, 31, 0.90)),
-    url("images/tło/tło ciemne.jpg") center / 560px repeat;
-}
+/* Co druga sekcja (Co oferujemy?, Cennik) — jednolite ciemne tło jak na początku projektu */
+.section-alt { background: rgba(20, 16, 31, 0.82); }
 
 .section-title {
   text-align: center;
