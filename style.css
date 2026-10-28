@@ -25,6 +25,8 @@ body {
 
 /* Tło strony — ciemne kwiatki tropikalne + LED-owa poświata.
    Obraz przesuwa się wolniej niż treść (parallax sterowany zmienną --scroll z script.js) */
+/* Tło strony — ciemne kwiatki tropikalne + LED-owa poświata.
+   Obraz przesuwa się wolniej niż treść (parallax sterowany zmienną --scroll z script.js) */
 body::before {
   content: "";
   position: fixed;
@@ -33,7 +35,7 @@ body::before {
   background:
     radial-gradient(600px 400px at 15% 0%, rgba(168, 85, 247, 0.14), transparent 60%),
     radial-gradient(600px 400px at 85% 100%, rgba(57, 255, 20, 0.09), transparent 60%),
-    url("images/tło/9940fe35-87a6-4de9-8abc-5166a612e65e.jpg") center top / cover no-repeat;
+    url("images/tło/tło ciemne.jpg") center top / cover no-repeat;
   opacity: 0.35;
   transform: translateY(calc(var(--scroll, 0) * 1px));
   z-index: 0;
@@ -189,7 +191,7 @@ a { color: var(--color-green); text-decoration: none; }
 .section-alt {
   background:
     linear-gradient(180deg, rgba(20, 16, 31, 0.90), rgba(20, 16, 31, 0.90)),
-    url("images/tło/35a551bd-aba1-422b-9a67-f0e1949acc8e.jpg") center / 560px repeat;
+    url("images/tło/tło ciemne.jpg") center / 560px repeat;
 }
 
 .section-title {
