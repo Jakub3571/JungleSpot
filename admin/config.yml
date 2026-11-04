@@ -4,7 +4,8 @@ backend:
 
 site_url: https://junglespot.netlify.app
 
-publish_mode: editorial_workflow
+media_folder: "images"
+public_folder: "/images"
 
 collections:
   - name: "tresci"
