@@ -1,0 +1,19 @@
+{
+  "hero-tytul": "REZERWACJA",
+  "hero-tekst": "Kalendarz rezerwacji",
+  "tytul": "Dziękujemy za rezerwację w Jungle Spot! 🎉",
+  "tekst": "Otrzymaliśmy Państwa zgłoszenie rezerwacji na termin",
+  "numer-etykieta": "Numer rezerwacji:",
+  "kaucja-tekst": "Aby potwierdzić rezerwację terminu, prosimy o wpłatę kaucji:",
+  "kaucja-standard": "Kaucja standardowa:",
+  "kaucja-standard-kwota": "400 zł",
+  "kaucja-mlodzi": "Imprezy dla osób poniżej 20. roku życia:",
+  "kaucja-mlodzi-kwota": "800 zł",
+  "bank-tytul": "Dane do przelewu",
+  "odbiorca": "DANIEL KOWALSKI WYNAJEM",
+  "numer-konta": "50 1020 1909 0000 3902 0335 4578",
+  "tytul-przelewu": "Tytuł przelewu:",
+  "przycisk-kopiuj": "Skopiuj tytuł przelewu",
+  "notka": "Po zaksięgowaniu wpłaty termin zostanie potwierdzony i oznaczony w kalendarzu jako zajęty. Potwierdzenie wysłaliśmy również na Państwa adres e-mail.",
+  "przycisk-powrot": "Wróć na stronę główną"
+}

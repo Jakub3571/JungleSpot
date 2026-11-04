@@ -20,7 +20,6 @@
         <a href="regulamin.html">Regulamin</a>
       </nav>
       <div class="topbar-actions">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Zmień motyw">🌙</button>
         <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
       </div>
     </div>
@@ -28,8 +27,8 @@
 
   <section class="page-hero">
     <div class="container">
-      <h1 class="hero-title">REZERWACJA</h1>
-      <p class="section-text">Kalendarz rezerwacji</p>
+      <h1 class="hero-title" data-content="hero-tytul">REZERWACJA</h1>
+      <p class="section-text" data-content="hero-tekst">Kalendarz rezerwacji</p>
     </div>
   </section>
 
@@ -37,33 +36,33 @@
     <div class="container container-narrow">
       <div class="confirm-box" id="confirm-box">
 
-        <h2 class="confirm-title">Dziękujemy za rezerwację w Jungle Spot! 🎉</h2>
+        <h2 class="confirm-title" data-content="tytul">Dziękujemy za rezerwację w Jungle Spot! 🎉</h2>
 
         <p id="confirm-tekst">
-          Otrzymaliśmy Państwa zgłoszenie rezerwacji na termin
+          <span data-content="tekst">Otrzymaliśmy Państwa zgłoszenie rezerwacji na termin</span>
           <strong id="confirm-data">—</strong>.
         </p>
 
-        <p>Numer rezerwacji: <strong id="confirm-numer">—</strong></p>
+        <p><span data-content="numer-etykieta">Numer rezerwacji:</span> <strong id="confirm-numer">—</strong></p>
 
         <div class="confirm-section">
-          <p>Aby potwierdzić rezerwację terminu, prosimy o wpłatę kaucji:</p>
-          <p class="confirm-kaucja">Kaucja standardowa: <strong>400 zł</strong></p>
-          <p class="confirm-kaucja">Imprezy dla osób poniżej 20. roku życia: <strong>800 zł</strong></p>
+          <p data-content="kaucja-tekst">Aby potwierdzić rezerwację terminu, prosimy o wpłatę kaucji:</p>
+          <p class="confirm-kaucja"><span data-content="kaucja-standard">Kaucja standardowa:</span> <strong data-content="kaucja-standard-kwota">400 zł</strong></p>
+          <p class="confirm-kaucja"><span data-content="kaucja-mlodzi">Imprezy dla osób poniżej 20. roku życia:</span> <strong data-content="kaucja-mlodzi-kwota">800 zł</strong></p>
           <p class="confirm-kwota" id="confirm-kwota"></p>
         </div>
 
         <div class="confirm-section bank-box">
-          <h3>Dane do przelewu</h3>
-          <p>Odbiorca: <strong>DANIEL KOWALSKI WYNAJEM</strong></p>
-          <p>Numer konta: <strong>50 1020 1909 0000 3902 0335 4578</strong></p>
-          <p>Tytuł przelewu: <strong id="confirm-tytul">KAUCJA —</strong></p>
-          <button type="button" class="btn btn-secondary btn-copy" id="copy-tytul">Skopiuj tytuł przelewu</button>
+          <h3 data-content="bank-tytul">Dane do przelewu</h3>
+          <p>Odbiorca: <strong data-content="odbiorca">DANIEL KOWALSKI WYNAJEM</strong></p>
+          <p>Numer konta: <strong data-content="numer-konta">50 1020 1909 0000 3902 0335 4578</strong></p>
+          <p><span data-content="tytul-przelewu">Tytuł przelewu:</span> <strong id="confirm-tytul">KAUCJA —</strong></p>
+          <button type="button" class="btn btn-secondary btn-copy" id="copy-tytul" data-content="przycisk-kopiuj">Skopiuj tytuł przelewu</button>
         </div>
 
-        <p class="confirm-note">Po zaksięgowaniu wpłaty termin zostanie potwierdzony i oznaczony w kalendarzu jako zajęty. Potwierdzenie wysłaliśmy także na Państwa adres e-mail.</p>
+        <p class="confirm-note" data-content="notka">Po zaksięgowaniu wpłaty termin zostanie potwierdzony i oznaczony w kalendarzu jako zajęty. Potwierdzenie wysłaliśmy również na Państwa adres e-mail.</p>
 
-        <a href="index.html" class="btn btn-primary">Wróć na stronę główną</a>
+        <a href="index.html" class="btn btn-primary" data-content="przycisk-powrot">Wróć na stronę główną</a>
       </div>
     </div>
   </section>
@@ -77,5 +76,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="texts.js" data-json="potwierdzenie.json"></script>
 </body>
 </html>

@@ -25,7 +25,6 @@
       </nav>
 
       <div class="topbar-actions">
-
         <a href="index.html" class="btn btn-primary btn-small">Wróć na stronę</a>
         <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
       </div>
@@ -34,8 +33,8 @@
 
   <section class="page-hero">
     <div class="container">
-      <h1 class="hero-title">ZAREZERWUJ TERMIN</h1>
-      <p class="section-text">Sprawdź dostępność w kalendarzu, wybierz dzień i wypełnij formularz.</p>
+      <h1 class="hero-title" data-content="hero-tytul">ZAREZERWUJ TERMIN</h1>
+      <p class="section-text" data-content="hero-tekst">Sprawdź dostępność w kalendarzu, wybierz dzień i wypełnij formularz.</p>
     </div>
   </section>
 
@@ -45,9 +44,9 @@
 
         <!-- LEWA STRONA: kalendarz -->
         <div class="calendar-box">
-          <h2 class="calendar-title">📅 Dostępność terminów</h2>
+          <h2 class="calendar-title" data-content="kalendarz-tytul">📅 Dostępność terminów</h2>
           <p class="calendar-hint">
-            Kliknij wolny dzień — data wstawi się do formularza.<br>
+            <span data-content="kalendarz-podpowiedz">Kliknij wolny dzień — data wstawi się do formularza.</span><br>
             <span class="legend-busy">■ zajęte</span>
             <span class="legend-pending">■ w oczekiwaniu na wpłatę</span>
           </p>
@@ -66,36 +65,36 @@
 
         <!-- PRAWA STRONA: formularz -->
         <form class="booking-form" id="booking-form">
-          <h2 class="form-title">Formularz rezerwacji</h2>
+          <h2 class="form-title" data-content="formularz-tytul">Formularz rezerwacji</h2>
 
           <label>
-            Imię i nazwisko
+            <span data-content="pole-imie">Imię i nazwisko</span>
             <input type="text" name="imie" required placeholder="Jan Kowalski">
           </label>
           <label>
-            E-mail
+            <span data-content="pole-email">E-mail</span>
             <input type="email" name="email" required placeholder="jan@example.com">
           </label>
           <label>
-            Telefon
+            <span data-content="pole-telefon">Telefon</span>
             <input type="tel" name="telefon" required placeholder="600 100 200">
           </label>
           <label>
-            Data imprezy (wybierz z kalendarza)
+            <span data-content="pole-data">Data imprezy (wybierz z kalendarza)</span>
             <input type="date" name="data" required readonly>
           </label>
           <label>
-            Czy wszyscy goście są w wieku 20+ lat?
+            <span data-content="pole-wiek">Czy wszyscy goście są w wieku 20+ lat?</span>
             <select name="wiek">
               <option value="tak">Tak — kaucja 400 zł</option>
               <option value="nie">Nie — kaucja 800 zł</option>
             </select>
           </label>
-                    <fieldset class="yesno-group">
-            <legend>Dodatkowe usługi — zaznacz Tak lub Nie:</legend>
+          <fieldset class="yesno-group">
+            <legend data-content="pytania-tytul">Dodatkowe usługi — zaznacz Tak lub Nie:</legend>
 
             <div class="yesno-row">
-              <span class="yesno-name">Czy jesteś zainteresowany usługami DJ-a?</span>
+              <span class="yesno-name" data-content="pytanie-dj">Czy jesteś zainteresowany usługami DJ-a?</span>
               <span class="yesno-options">
                 <label class="yesno-option"><input type="radio" name="usluga_dj" value="tak" required><span class="yesno-mark"></span>Tak</label>
                 <label class="yesno-option"><input type="radio" name="usluga_dj" value="nie" required><span class="yesno-mark"></span>Nie</label>
@@ -103,7 +102,7 @@
             </div>
 
             <div class="yesno-row">
-              <span class="yesno-name">Czy jesteś zainteresowany usługami ochrony?</span>
+              <span class="yesno-name" data-content="pytanie-ochrona">Czy jesteś zainteresowany usługami ochrony?</span>
               <span class="yesno-options">
                 <label class="yesno-option"><input type="radio" name="usluga_ochrona" value="tak" required><span class="yesno-mark"></span>Tak</label>
                 <label class="yesno-option"><input type="radio" name="usluga_ochrona" value="nie" required><span class="yesno-mark"></span>Nie</label>
@@ -111,7 +110,7 @@
             </div>
 
             <div class="yesno-row">
-              <span class="yesno-name">Katering?</span>
+              <span class="yesno-name" data-content="pytanie-katering">Katering?</span>
               <span class="yesno-options">
                 <label class="yesno-option"><input type="radio" name="usluga_katering" value="tak" required><span class="yesno-mark"></span>Tak</label>
                 <label class="yesno-option"><input type="radio" name="usluga_katering" value="nie" required><span class="yesno-mark"></span>Nie</label>
@@ -119,7 +118,7 @@
             </div>
 
             <div class="yesno-row">
-              <span class="yesno-name">Usługi barmańskie?</span>
+              <span class="yesno-name" data-content="pytanie-barman">Usługi barmańskie?</span>
               <span class="yesno-options">
                 <label class="yesno-option"><input type="radio" name="usluga_barman" value="tak" required><span class="yesno-mark"></span>Tak</label>
                 <label class="yesno-option"><input type="radio" name="usluga_barman" value="nie" required><span class="yesno-mark"></span>Nie</label>
@@ -127,7 +126,7 @@
             </div>
           </fieldset>
           <label>
-            Rodzaj imprezy
+            <span data-content="pole-rodzaj">Rodzaj imprezy</span>
             <select name="rodzaj">
               <option>Urodziny</option>
               <option>Impreza firmowa</option>
@@ -137,7 +136,7 @@
             </select>
           </label>
           <label>
-            Wiadomość (opcjonalnie)
+            <span data-content="pole-wiadomosc">Wiadomość (opcjonalnie)</span>
             <textarea name="wiadomosc" rows="3" placeholder="Dodatkowe informacje..."></textarea>
           </label>
           <label class="checkbox-label">
@@ -145,13 +144,13 @@
             Akceptuję <a href="regulamin.html">regulamin</a> lokalu
           </label>
 
-          <button type="submit" class="btn btn-primary btn-large">Wyślij rezerwację</button>
+          <button type="submit" class="btn btn-primary btn-large" data-content="przycisk">Wyślij rezerwację</button>
           <p class="form-status" id="form-status" role="status"></p>
         </form>
 
       </div>
 
-      <p class="contact-alt">Wolisz telefon? Zadzwoń: <a href="tel:+48667436655">667 436 655</a> ·
+      <p class="contact-alt"><span data-content="kontakt-alt">Wolisz telefon? Zadzwoń:</span> <a href="tel:+48667436655">667 436 655</a> ·
         napisz: <a href="mailto:junglespotgdansk@gmail.com">junglespotgdansk@gmail.com</a></p>
     </div>
   </section>
@@ -166,5 +165,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="texts.js" data-json="rezerwacja.json"></script>
 </body>
 </html>

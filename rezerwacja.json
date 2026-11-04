@@ -1,0 +1,21 @@
+{
+  "hero-tytul": "ZAREZERWUJ TERMIN",
+  "hero-tekst": "Sprawdź dostępność w kalendarzu, wybierz dzień i wypełnij formularz.",
+  "kalendarz-tytul": "📅 Dostępność terminów",
+  "kalendarz-podpowiedz": "Kliknij wolny dzień — data wstawi się do formularza.",
+  "formularz-tytul": "Formularz rezerwacji",
+  "pole-imie": "Imię i nazwisko",
+  "pole-email": "E-mail",
+  "pole-telefon": "Telefon",
+  "pole-data": "Data imprezy (wybierz z kalendarza)",
+  "pole-wiek": "Czy wszyscy goście są w wieku 20+ lat?",
+  "pytania-tytul": "Dodatkowe usługi — zaznacz Tak lub Nie:",
+  "pytanie-dj": "Czy jesteś zainteresowany usługami DJ-a?",
+  "pytanie-ochrona": "Czy jesteś zainteresowany usługami ochrony?",
+  "pytanie-katering": "Katering?",
+  "pytanie-barman": "Usługi barmańskie?",
+  "pole-rodzaj": "Rodzaj imprezy",
+  "pole-wiadomosc": "Wiadomość (opcjonalnie)",
+  "przycisk": "Wyślij rezerwację",
+  "kontakt-alt": "Wolisz telefon? Zadzwoń:"
+}
