@@ -1,0 +1,116 @@
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://junglespot.netlify.app
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "tresci"
+    label: "Treści na stronie"
+    editor:
+      preview: false
+    files:
+      - name: "strona-glowna"
+        label: "Strona główna"
+        file: "content.json"
+        fields:
+          - label: "Nagłówek główny (duży, u góry)"
+            name: "hero-title"
+            widget: "text"
+          - label: "Adres"
+            name: "hero-address"
+            widget: "string"
+          - label: "Telefon"
+            name: "hero-phone"
+            widget: "string"
+          - label: "E-mail"
+            name: "hero-email"
+            widget: "string"
+          - label: "Tytuł sekcji: O nas"
+            name: "onas-title"
+            widget: "string"
+          - label: "Tekst sekcji: O nas"
+            name: "onas-text"
+            widget: "text"
+          - label: "Tytuł sekcji: Co oferujemy"
+            name: "oferta-title"
+            widget: "string"
+          - { label: "Oferta — punkt 1", name: "oferta-1", widget: "string" }
+          - { label: "Oferta — punkt 2", name: "oferta-2", widget: "string" }
+          - { label: "Oferta — punkt 3", name: "oferta-3", widget: "string" }
+          - { label: "Oferta — punkt 4", name: "oferta-4", widget: "string" }
+          - { label: "Oferta — punkt 5", name: "oferta-5", widget: "string" }
+          - { label: "Oferta — punkt 6", name: "oferta-6", widget: "string" }
+          - { label: "Oferta — punkt 7", name: "oferta-7", widget: "string" }
+          - { label: "Oferta — punkt 8", name: "oferta-8", widget: "string" }
+          - { label: "Oferta — punkt 9", name: "oferta-9", widget: "string" }
+          - { label: "Oferta — punkt 10", name: "oferta-10", widget: "string" }
+          - { label: "Oferta — punkt 11", name: "oferta-11", widget: "string" }
+          - { label: "Oferta — punkt 12", name: "oferta-12", widget: "string" }
+          - { label: "Oferta — punkt 13", name: "oferta-13", widget: "string" }
+          - label: "Tytuł sekcji: Galeria"
+            name: "galeria-title"
+            widget: "string"
+          - label: "Tekst pod tytułem galerii"
+            name: "galeria-text"
+            widget: "string"
+          - label: "Tytuł sekcji: Cennik"
+            name: "cennik-title"
+            widget: "string"
+          - label: "Cennik 1 — nazwa pakietu"
+            name: "cennik-nr1-nazwa"
+            widget: "string"
+          - label: "Cennik 1 — czas trwania"
+            name: "cennik-nr1-czas"
+            widget: "string"
+          - { label: "Cennik 1 — punkt 1", name: "cennik-nr1-1", widget: "string" }
+          - { label: "Cennik 1 — punkt 2", name: "cennik-nr1-2", widget: "string" }
+          - { label: "Cennik 1 — punkt 3", name: "cennik-nr1-3", widget: "string" }
+          - label: "Cennik 1 — tekst przycisku"
+            name: "cennik-nr1-przycisk"
+            widget: "string"
+          - label: "Cennik 2 — odznaka (np. Najpopularniejszy)"
+            name: "cennik-nr2-badge"
+            widget: "string"
+          - label: "Cennik 2 — nazwa pakietu"
+            name: "cennik-nr2-nazwa"
+            widget: "string"
+          - label: "Cennik 2 — czas trwania"
+            name: "cennik-nr2-czas"
+            widget: "string"
+          - { label: "Cennik 2 — punkt 1", name: "cennik-nr2-1", widget: "string" }
+          - { label: "Cennik 2 — punkt 2", name: "cennik-nr2-2", widget: "string" }
+          - { label: "Cennik 2 — punkt 3", name: "cennik-nr2-3", widget: "string" }
+          - { label: "Cennik 2 — punkt 4", name: "cennik-nr2-4", widget: "string" }
+          - label: "Cennik 2 — tekst przycisku"
+            name: "cennik-nr2-przycisk"
+            widget: "string"
+          - label: "Cennik 3 — nazwa pakietu"
+            name: "cennik-nr3-nazwa"
+            widget: "string"
+          - label: "Cennik 3 — czas trwania"
+            name: "cennik-nr3-czas"
+            widget: "string"
+          - { label: "Cennik 3 — punkt 1", name: "cennik-nr3-1", widget: "string" }
+          - { label: "Cennik 3 — punkt 2", name: "cennik-nr3-2", widget: "string" }
+          - { label: "Cennik 3 — punkt 3", name: "cennik-nr3-3", widget: "string" }
+          - label: "Cennik 3 — tekst przycisku"
+            name: "cennik-nr3-przycisk"
+            widget: "string"
+          - label: "Notka pod cennikiem"
+            name: "cennik-notka"
+            widget: "string"
+          - label: "Tytuł sekcji: Lokalizacja"
+            name: "lokalizacja-title"
+            widget: "string"
+          - label: "Tekst pod tytułem lokalizacji"
+            name: "lokalizacja-text"
+            widget: "string"
+          - label: "Stopka — nazwa studia"
+            name: "footer-nazwa"
+            widget: "string"
+          - label: "Stopka — adres, telefon, e-mail"
+            name: "footer-dane"
+            widget: "text"
