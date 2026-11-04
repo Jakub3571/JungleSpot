@@ -23,35 +23,8 @@ body {
   line-height: 1.6;
 }
 
-/* Tło strony — ciemne kwiatki tropikalne + LED-owa poświata.
-   Obraz przesuwa się wolniej niż treść (parallax sterowany zmienną --scroll z script.js) */
-/* Tło strony — ciemne kwiatki tropikalne + LED-owa poświata.
-   Obraz przesuwa się wolniej niż treść (parallax sterowany zmienną --scroll z script.js) */
-/* Tło strony — ciemne kwiatki tropikalne + LED-owa poświata.
-   Obraz przesuwa się wolniej niż treść (parallax sterowany zmienną --scroll z script.js) */
-/* Tło strony — ciemne liście przyklejone na stałe za całą treścią.
-   Bez animacji: nic nie migocze, wzór jest ciągle widoczny. */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
-}
-
-/* Tło strony — ciemne liście przyklejone na stałe za całą treścią.
-   Statyczne: nic się nie przesuwa, nic nie migocze. */
+/* Delikatna LED-owa poświata pod całą stroną — lekka, responsywna, nic nie migocze */
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: url("images/tło/tło ciemne.jpg") center / cover no-repeat;
-  opacity: 0.45;
-  z-index: 0;
-}
-
-/* LED-owa poświata — osobna, statyczna warstwa */
-body::after {
   content: "";
   position: fixed;
   inset: 0;
@@ -60,6 +33,30 @@ body::after {
     radial-gradient(600px 400px at 15% 0%, rgba(168, 85, 247, 0.14), transparent 60%),
     radial-gradient(600px 400px at 85% 100%, rgba(57, 255, 20, 0.09), transparent 60%);
   z-index: 0;
+}
+
+/* Tło z liśćmi pojawia się falami co ~20 s — delikatny efekt „oddychania" */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: url("images/tło/tło ciemne.jpg") center / cover no-repeat;
+  opacity: 0;
+  animation: liscie-oddech 20s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes liscie-oddech {
+  0%   { opacity: 0; }
+  20%  { opacity: 0.30; }  /* pojawia się */
+  50%  { opacity: 0.30; }  /* chwilę trwa */
+  70%  { opacity: 0; }     /* znika */
+  100% { opacity: 0; }     /* przerwa */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::after { animation: none; opacity: 0.25; }
 }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
@@ -147,7 +144,8 @@ a { color: var(--color-green); text-decoration: none; }
 .hero {
   background:
     radial-gradient(800px 500px at 50% -10%, rgba(168, 85, 247, 0.35), transparent 65%),
-    linear-gradient(180deg, #140f22, #0d0a14);
+    linear-gradient(180deg, rgba(20, 15, 34, 0.88), rgba(13, 10, 20, 0.94)),
+    url("images/tło/tło ciemne.jpg") center / cover no-repeat;
   color: #ffffff;
   text-align: center;
   padding: 90px 20px;
@@ -203,9 +201,7 @@ a { color: var(--color-green); text-decoration: none; }
 /* ===== SEKCJE ===== */
 .section { padding: 60px 0; }
 
-/* Co druga sekcja — jasne liście pod ciemną, półprzezroczystą szybką
-   (naprzemiennie z ciemnymi liśćmi w tle całej strony) */
-/* Co druga sekcja (Co oferujemy?, Cennik) — jednolite ciemne tło jak na początku projektu */
+/* Co druga sekcja (Co oferujemy?, Cennik) — jednolite ciemne tło z lekkim prześwitem */
 .section-alt { background: rgba(20, 16, 31, 0.82); }
 
 .section-title {
@@ -399,9 +395,8 @@ a { color: var(--color-green); text-decoration: none; }
 .form-status.success { color: var(--color-green); font-weight: 600; text-shadow: 0 0 8px rgba(57, 255, 20, 0.5); }
 .form-status.error { color: #ff4d6d; font-weight: 600; }
 
-/* ===== STOPKA ===== */
 .footer {
-  background: linear-gradient(180deg, #14101f, #0d0a14);
+  background: #0d0a14;
   color: var(--color-muted);
   text-align: center;
   padding: 36px 20px;
@@ -440,6 +435,24 @@ a { color: var(--color-green); text-decoration: none; }
   }
   .nav.open { display: flex; }
   .topbar-inner { flex-wrap: wrap; }
+
+  /* Link "Zarezerwuj" w menu — tylko na telefonie */
+  .nav .nav-reserve {
+    display: block;
+    margin-top: 8px;
+    padding: 12px 16px !important;
+    border: 2px solid var(--color-green);
+    border-radius: 999px;
+    color: var(--color-green) !important;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+    box-shadow: inset 0 0 10px rgba(57, 255, 20, 0.12);
+  }
+  .nav .nav-reserve:hover {
+    background: rgba(57, 255, 20, 0.08);
+    box-shadow: var(--glow-green);
+  }
 }
 
 @media (max-width: 600px) {
@@ -634,27 +647,8 @@ a { color: var(--color-green); text-decoration: none; }
   .calendar-embed iframe { height: 420px; }
 }
 
-/* ===== LINK "ZAREZERWUJ" W MENU — TYLKO NA TELEFONIE ===== */
+/* Link "Zarezerwuj" w menu chowamy na komputerze */
 .nav .nav-reserve { display: none; }
-
-@media (max-width: 820px) {
-  .nav .nav-reserve {
-    display: block;
-    margin-top: 8px;
-    padding: 12px 16px !important;
-    border: 2px solid var(--color-green);
-    border-radius: 999px;
-    color: var(--color-green) !important;
-    text-align: center;
-    font-weight: 600;
-    text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
-    box-shadow: inset 0 0 10px rgba(57, 255, 20, 0.12);
-  }
-  .nav .nav-reserve:hover {
-    background: rgba(57, 255, 20, 0.08);
-    box-shadow: var(--glow-green);
-  }
-}
 
 /* ===== DZIEŃ "W OCZEKIWANIU" (rezerwacja wysłana, oczekuje na wpłatę) ===== */
 .cal-pending {
