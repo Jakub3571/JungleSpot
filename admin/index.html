@@ -4,8 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JungleSpot — panel edycji treści</title>
+
+  <!-- Okienko logowania Netlify Identity (BEZ TEGO nie pokaże się ekran logowania) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+
+  <!-- Panel Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <script>
+    // Jeśli ktoś wszedł przez #invite_token z maila — dokończ rejestrację hasłem
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', function (user) {
+        if (!user) {
+          window.netlifyIdentity.on('login', function () { location.reload(); });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
