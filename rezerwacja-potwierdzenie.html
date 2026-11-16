@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header class="topbar">
@@ -47,8 +49,10 @@
 
         <div class="confirm-section">
           <p data-content="kaucja-tekst">Aby potwierdzić rezerwację terminu, prosimy o wpłatę kaucji:</p>
-          <p class="confirm-kaucja"><span data-content="kaucja-standard">Kaucja standardowa:</span> <strong data-content="kaucja-standard-kwota">400 zł</strong></p>
-          <p class="confirm-kaucja"><span data-content="kaucja-mlodzi">Imprezy dla osób poniżej 20. roku życia:</span> <strong data-content="kaucja-mlodzi-kwota">800 zł</strong></p>
+          <p class="confirm-kaucja"><span data-content="kaucja-standard">Kaucja standardowa:</span> <strong
+              data-content="kaucja-standard-kwota">400 zł</strong></p>
+          <p class="confirm-kaucja"><span data-content="kaucja-mlodzi">Imprezy dla osób poniżej 20. roku życia:</span>
+            <strong data-content="kaucja-mlodzi-kwota">800 zł</strong></p>
           <p class="confirm-kwota" id="confirm-kwota"></p>
         </div>
 
@@ -57,10 +61,12 @@
           <p>Odbiorca: <strong data-content="odbiorca">DANIEL KOWALSKI WYNAJEM</strong></p>
           <p>Numer konta: <strong data-content="numer-konta">50 1020 1909 0000 3902 0335 4578</strong></p>
           <p><span data-content="tytul-przelewu">Tytuł przelewu:</span> <strong id="confirm-tytul">KAUCJA —</strong></p>
-          <button type="button" class="btn btn-secondary btn-copy" id="copy-tytul" data-content="przycisk-kopiuj">Skopiuj tytuł przelewu</button>
+          <button type="button" class="btn btn-secondary btn-copy" id="copy-tytul"
+            data-content="przycisk-kopiuj">Skopiuj tytuł przelewu</button>
         </div>
 
-        <p class="confirm-note" data-content="notka">Po zaksięgowaniu wpłaty termin zostanie potwierdzony i oznaczony w kalendarzu jako zajęty. Potwierdzenie wysłaliśmy również na Państwa adres e-mail.</p>
+        <p class="confirm-note" data-content="notka">Po zaksięgowaniu wpłaty termin zostanie potwierdzony i oznaczony w
+          kalendarzu jako zajęty. Potwierdzenie wysłaliśmy również na Państwa adres e-mail.</p>
 
         <a href="index.html" class="btn btn-primary" data-content="przycisk-powrot">Wróć na stronę główną</a>
       </div>
@@ -78,4 +84,5 @@
   <script src="script.js"></script>
   <script src="texts.js" data-json="potwierdzenie.json"></script>
 </body>
+
 </html>
